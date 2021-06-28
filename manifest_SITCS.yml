@@ -1,0 +1,14 @@
+---
+applications:
+  - name: download-demo-sitcs
+    services:
+     - sa-scale
+
+    instances: 1
+    memory: 2G
+    path: target/download-demo-1.0.0.jar
+    buildpack: dicf_java_buildpack_437
+    stack: cflinuxfs3
+
+    env:       
+      logging.level.com.dell.sit: INFO
